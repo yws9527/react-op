@@ -7,7 +7,7 @@ module.exports = {
   env: {
     browser: true
   },
-  extends: 'standard',
+  extends: 'react-app',
   plugins: [
     'html'
   ],
