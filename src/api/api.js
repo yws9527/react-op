@@ -1,7 +1,7 @@
-import axios from 'axios'
+const axios = require('axios')
 require('babel-plugin-transform-node-env-inline')
 const env = process.env.NODE_ENV === 'production' ? 'prod' : 'dev'
-const host = env === 'prod' ? 'http://prod/api' : 'http://dev/api'
+const host = env === 'prod' ? 'https://www.easy-mock.com/mock/5b5005e53720ca0b98ba8265/prod':'http://localhost:3000/dev'
 
 axios.defaults.baseURL = host
 axios.defaults.timeout = 100000 // 超时时间
@@ -35,9 +35,9 @@ axios.interceptors.request.use(
 // )
 
 // post 请求格式
-const getData1 = (data) => axios({method: 'post', url: '/user/12345', data: data})
+const getData1 = (data) => axios({method: 'post', url: '/api/upload/12345', data: data})
 // get 请求格式
-const getData2 = (data) => axios({method: 'get', url: '/user/23333', params: data })
+const getData2 = (data) => axios({method: 'get', url: '/api/query/23333', params: data })
 
 export {
   getData1,
