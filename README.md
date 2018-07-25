@@ -2454,8 +2454,11 @@ If you have ideas for more “How To” recipes that should be on this page, [le
 ### https://reacttraining.com/react-router/web/guides/quick-start
 ### https://doc.react-china.org/
 ### https://www.cnblogs.com/fml1com/p/5149269.html
-###
-###
-###
-###
-###
+### https://react-guide.github.io/react-router-cn/
+
+## 实现 只有当子路由(home路由)被激活时， 根路由(/)路由才被激活 的方式有两种
+### 1.使用 indexLink eg: <IndexLink to="/" activeClassName="active">Home</IndexLink>
+### 2.使用 onlyActiveOnIndex 属性
+#### eg: <Link to="/" activeClassName="active" onlyActiveOnIndex={true}>Home</Link> 或
+#### activeClassName已经包装在NavLink中了，所以我们还可以用NavLink组件来实现：
+#### <NavLink to="/" onlyActiveOnIndex={true}>Home</NavLink>
